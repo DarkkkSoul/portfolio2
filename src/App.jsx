@@ -1,5 +1,8 @@
+import ProjectComponent from './components/ProjectComponent';
 import Terminal from './components/Terminal';
 import './index.css';
+import projects from './Arrays/projects.js';
+
 function App() {
     return (
         <div className='bg-gradient-to-br from-lime-400 from-0% via-green-300 via-60% to-lime-900 h-full w-full flex items-center justify-center p-10'>
@@ -19,7 +22,20 @@ function App() {
                     </p>
                 </div>
 
-                <Terminal />
+                <div>
+                    <Terminal />
+                </div>
+
+                <div>
+                    <div className='text-2xl'>Projects</div>
+                    <div className='grid grid-cols-1 gap-y-6'>
+                        {
+                            projects.map((project) => (
+                                <ProjectComponent id={project.pid} title={project.title} description={project.description} tech={project.tech} image={project.image} />
+                            ))
+                        }
+                    </div>
+                </div>
 
             </div>
         </div>
