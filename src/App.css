@@ -1,17 +1,40 @@
-.blinker {
-    animation: blink 1s linear infinite;
+.css-bento {
+    display: grid;
+    gap: 0.7rem;
+    justify-self: center;
+    align-self: center;
+
+    grid-template-columns: 3rem 2rem 8rem 10rem 0.5px;
+    grid-template-rows: 2.5rem 2.5rem 3rem 6rem 5rem;
+
+    grid-template-areas: '. . novel . .'
+        '. . novel blog blog'
+        '. image image blog blog'
+        '. image image music .'
+        'social social social music .';
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
+.css-bento>div {
+    border-radius: 1rem;
+    /* box-shadow: 3px 3px 7px black; */
+}
 
-    50% {
-        opacity: 0;
-    }
+.css-novel {
+    grid-area: novel;
+}
 
-    100% {
-        opacity: 1;
-    }
+.css-blog {
+    grid-area: blog;
+}
+
+.css-image {
+    grid-area: image;
+}
+
+.css-social {
+    grid-area: social;
+}
+
+.css-music {
+    grid-area: music;
 }

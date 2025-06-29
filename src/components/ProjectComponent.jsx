@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProjectComponent(props) {
     return (
-        <div className='rounded-lg flex items-center justify-between gap-x-4 duration-300 text-black px-4 py-2 ring shadow-2xl/45 hover:ring-amber-100 hover:shadow-none' key={props.pid}>
+        <div className='rounded-lg flex items-center justify-between gap-x-4 duration-300 text-black px-4 py-2 shadow-2xl/45 hover:shadow' key={props.pid}>
 
             <div className='w-80 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
 
@@ -41,5 +41,6 @@ function ProjectComponent(props) {
         </div>
     )
 }
+
 
 export default ProjectComponent
