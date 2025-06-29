@@ -12,7 +12,7 @@ function App() {
 
                 {/* about me & image */}
 
-                <div className='flex items-center justify-between px-5'>
+                <div className='flex items-center justify-between px-5 text-istok-400'>
                     <div className='text-lg w-2/3'>
                         <div className='flex flex-col'>
                             <div className='text-3xl'>Welcomeoi,</div>
@@ -29,7 +29,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className='w-2xl'>
+                <div className='max-w-2xl'>
                     <Skills />
                 </div>
 

@@ -5,10 +5,10 @@ function Skills() {
     const skillsArray = ['Javascript', 'ReactJs', 'TailwindCSS', 'Typescript', 'NodeJs', 'ExpressJs', 'MongoDB', 'Vite', 'Vercel', 'Figma', 'Markdown', 'git'];
 
     return (
-        <div className='flex flex-wrap gap-x-2 gap-y-1 *:bg-lime-400/50'>
+        <div className='flex flex-wrap items-center gap-x-2 gap-y-2.5 *:bg-lime-300/60 text-istok-400'>
             {
                 skillsArray.map((skill) => (
-                    <div className='py-1 px-1.5 text-sm border-1 border-white rounded-lg'>
+                    <div className='pt-1.5 pb-1 px-2 text-sm border-1 border-white/80 rounded-lg flex items-center shadow-lg/27'>
                         {skill}
                     </div>
                 ))
