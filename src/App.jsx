@@ -53,10 +53,15 @@ function App() {
                     <div className='grid grid-cols-1 gap-y-6'>
                         {
                             projects.map((project) => (
-                                <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} image={project.image} />
+                                <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} image={project.image} demo={project.demo} source={project.source} />
                             ))
                         }
                     </div>
+                </div>
+
+                {/* working on */}
+                <div>
+                    <div>Working On</div>
                 </div>
 
                 {/* footer */}
