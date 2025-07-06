@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import '../App.css'
-import { Link } from 'react-router'
 import Blog from './Blog'
 import blogArray from '../Arrays/blogs'
+import { useModal } from '../Context/ModalContext'
 
 function Bento() {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, setIsOpen } = useModal();
 
   return (
     <div className='css-bento w-ful h-full *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
@@ -19,10 +19,12 @@ function Bento() {
         <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer'>Blogs</p>
 
         {
-          isOpen && <div className='fixed top-70 bottom-64 left-5 right-5 z-50 flex backdrop-blur-md bg-gradient-to-bl from-lime-400 via-green-400 to-lime-600 rounded-xl shadow-2xl/50 p-5'>
+          isOpen &&
+
+          <div className='fixed top-70 bottom-64 left-5 right-5 z-50 flex backdrop-blur-md bg-gradient-to-bl from-lime-400 via-green-400 to-lime-500 rounded-xl shadow-2xl/50 p-5'>
             <div className='flex flex-col gap-y-3'>
 
-              <div className='text-2xl text-center text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Blogs</div>
+              <div className='text-2xl text-center text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500'>Blogs</div>
               <div className='grid grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300 '>
                 {blogArray.map((blog) => (
                   <Blog title={blog.title} description={blog.description} link={blog.link} />
