@@ -35,26 +35,23 @@ function App() {
                     </div>
 
                     {/* skills */}
-                    <div className='max-w-2xl flex flex-col text-istok-400 gap-y-4 mt-2'>
+                    <div className='max-w-2xl flex flex-col text-istok-400 sm:gap-y-4 gap-y-3 sm:mt-2'>
                         <div className='sm:text-2xl text-xl text-center text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Skills</div>
                         <Skills />
                     </div>
 
                     {/* rengoku */}
-                    <div className='text-istok-400 text-lg tracking-normal flex gap-x-1 items-center justify-center mt-6'>
-                        <div>
-                            I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben.
-                        </div>
-                        <div>
+                    <div className='text-istok-400 sm:text-lg text-md tracking-normal mt-6'>
+                        <div className='inline'>
+                            I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben <span className='inline-block align-middle'> <img src="/sound.png" className='sm:w-5 w-6 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} /></span>.
                             <audio id='sound1' src="/umai.mp3"></audio>
-                            <img src="/sound.png" className='w-5 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} />
                         </div>
                     </div>
 
                     {/* bento */}
-                    {/* <div className='w-full mt-4'>
+                    <div className='w-full mt-4'>
                         <Bento />
-                    </div> */}
+                    </div>
 
                     {/* projects */}
                     {/* <div className='text-istok-400 flex flex-col gap-y-5 mt-5'>
