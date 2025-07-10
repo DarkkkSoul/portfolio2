@@ -13,29 +13,30 @@ function App() {
                 <div className="fixed inset-0 backdrop-blur-lg bg-black/50 overflow-hidden" />
             )}
 
-            <div className='bg-gradient-to-br from-lime-400 from-0% via-green-300 via-60% to-lime-900 h-full w-full flex items-center justify-center p-10'>
+            <div className='bg-gradient-to-br from-lime-400 from-0% via-green-300 via-60% to-lime-900 h-full w-full flex items-center justify-center sm:p-10 p-4'>
 
-                <div className='bg-white/30 backdrop-blur-lg w-1/2 py-10 px-5 rounded-md flex flex-col items-center justify-center gap-y-6'>
+                <div className='bg-white/30 backdrop-blur-lg w-94 sm:w-1/2 py-6 sm:py-10 px-5 rounded-md flex flex-col items-center justify-center gap-y-6'>
 
                     {/* about me & image */}
-                    <div className='flex items-center justify-between px-5 text-istok-400'>
-                        <div className='w-2/3'>
-                            <div className='flex flex-col gap-y-1'>
-                                <div className='text-3xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Welcomeoi,</div>
-                                <p className='text-lg tracking-tight'>
+                    <div className='flex sm:flex-row flex-col-reverse items-center justify-between sm:px-5 gap-y-4 text-istok-400'>
+
+                        <div className='sm:w-2/3'>
+                            <div className='flex flex-col sm:gap-y-1 gap-y-1.5'>
+                                <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Welcomeoi,</div>
+                                <p className='sm:text-lg text-md sm:tracking-tight'>
                                     Watashi wa (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a 19 year old web developer from India. I love building <span className='font-extrabold'>interactive, unique and scalable</span> interfaces using  <span className='text-lime-800 drop-shadow-lg drop-shadow-amber-200 font-extrabold'>MERN</span> stack. I work solo and fast, mostly with Javascript frameworks. Apart from coding, I love watching <span className='text-black font-semibold'>Minecraft</span> videos.
                                 </p>
                             </div>
                         </div>
 
-                        <div className='w-45 rounded-full'>
+                        <div className='sm:w-45 w-40 rounded-full'>
                             <img src="/ds.png" className='rounded-full' />
                         </div>
                     </div>
 
                     {/* skills */}
                     <div className='max-w-2xl flex flex-col text-istok-400 gap-y-4 mt-2'>
-                        <div className='text-2xl text-center text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Skills</div>
+                        <div className='sm:text-2xl text-xl text-center text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Skills</div>
                         <Skills />
                     </div>
 
@@ -51,12 +52,12 @@ function App() {
                     </div>
 
                     {/* bento */}
-                    <div className='w-full mt-4'>
+                    {/* <div className='w-full mt-4'>
                         <Bento />
-                    </div>
+                    </div> */}
 
                     {/* projects */}
-                    <div className='text-istok-400 flex flex-col gap-y-5 mt-5'>
+                    {/* <div className='text-istok-400 flex flex-col gap-y-5 mt-5'>
                         <div className='text-2xl text-center text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Projects</div>
                         <div className='grid grid-cols-1 gap-y-6'>
                             {
@@ -65,7 +66,7 @@ function App() {
                                 ))
                             }
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* footer */}
                     <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 text-istok-400 text-sm'>
