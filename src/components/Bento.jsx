@@ -9,17 +9,14 @@ function Bento() {
 
     const { isOpen, setIsOpen } = useModal();
     // const { isCopied, setIsCopied } = useState(false);
-    const [music, setMusic] = useState('');
 
+    const [music, setMusic] = useState('');
+    let [musicIndex, setMusicIndex] = useState(0);
     const handleMusic = () => {
-        // for (let i = 0; i <= musicArray.length; i++) {
-        //     setMusic(musicArray[i]);
-        //     console.log(music);
-        // }
-        let i = 0;
-        setMusic(musicArray[i]);
-        console.log(music)
-        i = i + 1;
+        let next = musicIndex + 1;
+        if (next > musicArray.length - 1) next = 0;
+        setMusicIndex(next);
+        setMusic(musicArray[next]);
     }
 
     const handleCopy = (text) => {
@@ -78,7 +75,7 @@ function Bento() {
             {/* Music */}
             <div className='css-music flex flex-col justify-center items-center'>
                 <div>
-                    <a onClick={handleMusic}>
+                    <a onClick={handleMusic} href={music} target='_blank'>
                         <img src="music/music.png" className='rounded-xl w-40' />
                     </a>
                 </div>
