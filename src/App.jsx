@@ -67,11 +67,6 @@ function App() {
                         </div>
                     </div>
 
-                    {/* working on */}
-                    <div>
-                        <div>Working On</div>
-                    </div>
-
                     {/* footer */}
                     <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 text-istok-400 text-sm'>
                         <hr className='w-2/3 border-1 border-lime-600 drop-shadow-lg ' />
