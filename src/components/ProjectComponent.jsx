@@ -3,7 +3,7 @@ import React from 'react'
 function ProjectComponent(props) {
     return (
 
-        <div className='rounded-lg flex items-center justify-between gap-x-4 duration-300 text-black px-4 py-2 shadow-2xl/45 hover:shadow text-istok-400 w-lg ' key={props.pid}>
+        <div className='rounded-lg flex sm:flex-row flex-col sm:items-center sm:justify-between gap-x-4 gap-y-1.5 duration-300 text-black px-4 sm:py-2 py-4 shadow-2xl/45 hover:shadow text-istok-400 sm:w-lg w-full' key={props.pid}>
 
             <div className='w-80 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
 
@@ -20,15 +20,15 @@ function ProjectComponent(props) {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center gap-x-2 text-xs overflow-hidden'>
+            <div className='flex items-center sm:justify-center sm:gap-x-2 gap-x-2 overflow-hidden'>
                 <div>
                     <a href={props.source} target='_blank' className='cursor-pointer'>
-                        <img src="/demo.png" className='w-5' />
+                        <img src="/demo.png" className='sm:w-5 w-5.5' />
                     </a>
                 </div>
                 <div>
                     <a href={props.demo} target='_blank' className='cursor-pointer'>
-                        <img src="/link.png" className='w-4' />
+                        <img src="/link.png" className='sm:w-4 w-4.5' />
                     </a>
                 </div>
             </div>

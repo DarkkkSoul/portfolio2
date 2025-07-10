@@ -9,9 +9,9 @@ function Bento() {
 
     const { isOpen, setIsOpen } = useModal();
     // const { isCopied, setIsCopied } = useState(false);
-
     const [music, setMusic] = useState('');
     let [musicIndex, setMusicIndex] = useState(0);
+
     const handleMusic = () => {
         let next = musicIndex + 1;
         if (next > musicArray.length - 1) next = 0;
