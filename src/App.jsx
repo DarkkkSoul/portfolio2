@@ -24,7 +24,7 @@ function App() {
                      <div className='flex flex-col sm:gap-y-1 gap-y-1.5'>
                         <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Welcomeoi,</div>
                         <p className='sm:text-lg text-md sm:tracking-tight'>
-                           Watashi wa (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a 19 year old web developer from India. I love building <span className='font-extrabold'>interactive, unique and scalable</span> interfaces using  <span className='text-lime-800 drop-shadow-lg drop-shadow-amber-200 font-extrabold'>MERN</span> stack. I work solo and fast, mostly with Javascript frameworks. Apart from coding, I love watching <span className='text-black font-semibold'>Minecraft</span> videos.
+                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a 19 year old web developer from India. I love building <span className='font-extrabold'>interactive, unique and scalable</span> interfaces using  <span className='text-lime-800 drop-shadow-lg drop-shadow-amber-200 font-extrabold'>MERN</span> stack. I work solo and fast, mostly with Javascript frameworks.
                         </p>
                      </div>
                   </div>
@@ -41,18 +41,18 @@ function App() {
                </div>
 
                {/* Hire me */}
-               <div className='max-w-2xl flex flex-col text-istok-400 sm:gap-y-1 gap-y-1 sm:mt-2.5'>
-                  <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 mb-1 sm:mb-0'>Hire Me</div>
+               <div className='max-w-2xl flex flex-col text-istok-400 sm:gap-y-0.5 gap-y-1 sm:mt-3'>
+                  <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 mb-1 sm:mb-0'>Hire me</div>
                   <div className='text-md sm:text-lg tracking-tight'>
                      <div>Have an idea? I can bring it live within weeks. Looking for a person who has immense attraction towards coding? I’m here. I’m available for internships & freelancing gigs.</div>
-                     <div>I code first, talk later.</div>
+                     <div className='font-semibold'>I code first, talk later.</div>
                      <div></div>
                   </div>
                </div>
 
 
                {/* rengoku */}
-               <div className='text-istok-400 sm:text-lg text-md tracking-normal sm:mt-6 mt-3'>
+               <div className='text-istok-400 sm:text-lg text-md tracking-normal sm:mt-4 mt-3'>
                   <div className='inline'>
                      I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben <span className='inline-block align-middle'> <img src="/sound.png" className='sm:w-5 w-6 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} /></span>.
                      <audio id='sound1' src="/umai.mp3"></audio>
@@ -65,9 +65,9 @@ function App() {
                </div>
 
                {/* projects */}
-               <div className='text-istok-400 flex flex-col gap-y-5 sm:mt-5 mt-3'>
-                  <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Projects</div>
-                  <div className='grid grid-cols-1 sm:gap-y-6 gap-y-4'>
+               <div className='w-full flex flex-col text-istok-400 gap-y-5 sm:mt-5 mt-3'>
+                  <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 pl-[1.5rem]'>Projects</div>
+                  <div className='grid grid-cols-1 items-center sm:gap-y-6 gap-y-4 mx-auto'>
                      {
                         projects.map((project) => (
                            <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} image={project.image} demo={project.demo} source={project.source} />
