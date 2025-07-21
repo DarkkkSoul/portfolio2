@@ -42,6 +42,8 @@ function Bento() {
       }
    }, [isCopied]);
 
+
+
    useEffect(() => {
       if (isOpen) {
          document.body.style.overflow = 'hidden';

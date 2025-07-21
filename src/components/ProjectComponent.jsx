@@ -7,7 +7,7 @@ function ProjectComponent(props) {
     return (
         <div className='rounded-lg flex sm:flex-row flex-col sm:items-center sm:justify-between gap-x-4 gap-y-1.5 duration-300 text-black px-4 sm:py-3 py-4 shadow-2xl/45 hover:shadow text-istok-400 sm:w-lg w-full relative' key={props.pid}>
 
-            <div className='sm:w-86 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
+            <div className='sm:w-106 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
 
                 <div className='text-lg font-semibold flex items-center justify-between gap-x-1.5 '>
                     <div>{props.title}</div>
@@ -41,16 +41,23 @@ function ProjectComponent(props) {
             </div>
 
             <div className='flex items-center sm:justify-center sm:gap-x-2 gap-x-2 overflow-hidden'>
-                <div>
-                    <a href={props.source} target='_blank' className='cursor-pointer'>
-                        <img src="/demo.png" className='sm:w-5 w-5.5' />
-                    </a>
-                </div>
-                <div>
-                    <a href={props.demo} target='_blank' className='cursor-pointer'>
-                        <img src="/link.png" className='sm:w-4 w-4.5' />
-                    </a>
-                </div>
+                {props.demo && (
+                    <div>
+                        <a href={props.demo} target="_blank" className="cursor-pointer">
+                            <img src="/demo.png" className="sm:w-5 w-[22px]" />
+                        </a>
+                    </div>
+                )}
+
+                {props.link && (
+                    <div>
+                        <a href={props.link} target="_blank" className="cursor-pointer">
+                            <img src="/link.png" className="sm:w-4 w-[18px]" />
+                        </a>
+                    </div>
+                )}
+
+
             </div>
         </div >
     )

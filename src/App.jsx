@@ -84,7 +84,7 @@ function App() {
                   <div className='grid grid-cols-1 items-center sm:gap-y-6 gap-y-4 mx-auto'>
                      {
                         projects.map((project) => (
-                           <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} image={project.image} demo={project.demo} source={project.source} />
+                           <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} link={project.link} demo={project.demo} />
                         ))
                      }
                   </div>
