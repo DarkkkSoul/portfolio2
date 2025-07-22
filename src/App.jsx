@@ -65,7 +65,6 @@ function App() {
                   </div>
                </div>
 
-
                {/* rengoku */}
                <div className='text-istok-400 sm:text-lg text-md tracking-normal sm:mt-4 mt-3 gsap-animate'>
                   <div className='inline'>

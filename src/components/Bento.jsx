@@ -51,7 +51,7 @@ function Bento() {
    }, [isOpen]);
 
    return (
-      <div className='css-bento w-ful h-full *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
+      <div className='css-bento h-full *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
 
          {/* Code lines */}
          <div className='css-novel pl-2 flex flex-col items-start justify-center'>
@@ -88,11 +88,9 @@ function Bento() {
                   </button>
                </div>
             }
-
-
-
          </div>
 
+         {/* okaru photo */}
          <div className='css-image flex flex-col justify-center items-center'>
             <img src="/ok.png" className='rounded-xl object-fit w-44' />
          </div>

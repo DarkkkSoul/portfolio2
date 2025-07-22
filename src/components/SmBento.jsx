@@ -6,6 +6,7 @@ import { useModal } from '../Context/ModalContext'
 import musicArray from '../Arrays/musics'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { div } from 'motion/react-client'
 
 
 function SmBento() {
@@ -52,74 +53,55 @@ function SmBento() {
    }, [isOpen]);
 
    return (
-      <div className='flex flex-col gap-y-3 *:rounded-2xl *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
-         {/* Code lines */}
-         <div className='flex flex-col py-4 px-6 items-start'>
-            <div className='text-4xl text-istok-700'>20k+</div>
-            <div className=''>lines coded</div>
-         </div>
+      // <div className='w-full h-full text-istok-400'>
 
-         {/* Blog */}
-         <div className='flex flex-col justify-center pl-3'>
-            <p className='text-md'>I write</p>
-            <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-3'>Blogs</p>
+      //    <div className='shadow-lg/35 bg-lime-300/30'>
+      //       <div className='text-3xl text-istok-700 '>20k+</div>
+      //       <div className=''>lines coded</div>
+      //    </div>
 
-            {
-               isOpen &&
-               <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
-                  <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
+      //    <div className='flex flex-col shadow-lg/35 bg-lime-300/30'>
+      //       <p className='text-md'>I write</p>
+      //       <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-3'>Blogs</p>
+      //       {
+      //          isOpen &&
+      //          <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
+      //             <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
 
-                     <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
-                        Blogs
-                     </div>
+      //                <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
+      //                   Blogs
+      //                </div>
 
-                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
-                        {blogArray.map((blog, i) => (
-                           <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
-                        ))}
-                     </div>
-                  </div>
+      //                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
+      //                   {blogArray.map((blog, i) => (
+      //                      <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
+      //                   ))}
+      //                </div>
+      //             </div>
 
-                  <button
-                     className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
-                     onClick={() => setIsOpen(false)}
-                  >
-                     <img src="/close.png" className='w-8 sm:w-9' />
-                  </button>
-               </div>
-            }
+      //             <button
+      //                className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
+      //                onClick={() => setIsOpen(false)}
+      //             >
+      //                <img src="/close.png" className='w-8 sm:w-9' />
+      //             </button>
+      //          </div>
+      //       }
+      //    </div>
 
+      //    <div>
 
+      //    </div>
 
-         </div>
+      //    <div>
 
-         <div className=' flex flex-col justify-center items-center'>
-            <img src="/ok.png" className='rounded-xl object-fit w-44' />
-         </div>
+      //    </div>
 
-         {/* socials */}
-         <div className=' flex flex-col justify-center text-istok-400'>
-            <div className='mx-auto text-md tracking-normal text-black font-extrabold'>Socials</div>
-            <div className='flex px-1 items-center justify-evenly relative'>
-               <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/linkedin.png" /></a>
-               <a href="https://github.com/darkkksoul" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/github.png" /></a>
-               <img src="/Icons/discord.png" onClick={() => { handleCopy('darkk.soul_') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
-               <img src="/Icons/gmail.png" onClick={() => { handleCopy('maheshh.kumar1508@gmail.com') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
-               <a href="https://drive.google.com/file/d/1B4ljFvLkta-UpOaGXlq7GY3kVQiqE_fH/view?usp=sharing" target='_blank' className='w-7.5 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/resume.png" /></a>
-               <p className={`absolute -top-9 right-5 text-sm bg-white/80 p-1.5 leading-none rounded-md tracking-wide ${isCopied ? 'block' : 'hidden'} text-istok-400 gsap-copy`}>copied!</p>
-            </div>
-         </div>
+      //    <div>
 
-         {/* Music */}
-         <div className='flex flex-col justify-center items-center'>
-            <div>
-               <a onClick={handleMusic} href={music} target='_blank'>
-                  <img src="music/music.png" className='rounded-xl w-40' />
-               </a>
-            </div>
-         </div>
-
-      </div>
+      //    </div>
+      // </div>
+      <div></div>
    )
 }
 
