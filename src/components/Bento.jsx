@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../App.css'
 import Blog from './Blog'
 import blogArray from '../Arrays/blogs'
@@ -42,8 +42,6 @@ function Bento() {
       }
    }, [isCopied]);
 
-
-
    useEffect(() => {
       if (isOpen) {
          document.body.style.overflow = 'hidden';
@@ -52,18 +50,31 @@ function Bento() {
       }
    }, [isOpen]);
 
+   // const el = useRef(null);
+   // useEffect(() => {
+   //    const typed = new Typed(el.current, {
+   //       strings: ["<span classname=''>70k+<span> Coded lines", 'Open for freelancing'],
+   //       typeSpeed: 50,
+   //    });
+   //    return () => {
+   //       // Destroy Typed instance during cleanup to stop animation
+   //       typed.destroy();
+   //    };
+   // }, []);
+
    return (
       <div className='css-bento w-ful h-full *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
+
          {/* Code lines */}
-         <div className='css-novel flex flex-col justify-center pl-2'>
-            <p className='text-md'><span className='text-3xl text-istok-700'> </span> </p>
-            <p className='text-md'> </p>
+         <div className='css-novel pl-2 flex flex-col items-start justify-center'>
+            <div className='text-4xl text-istok-700'>70k+</div>
+            <div className='pl-5'>lines coded</div>
          </div>
 
          {/* Blog */}
          <div className='css-blog flex flex-col justify-center pl-3'>
             <p className='text-md'>I write</p>
-            <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer'>Blogs</p>
+            <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-3'>Blogs</p>
 
             {
                isOpen &&
@@ -95,7 +106,7 @@ function Bento() {
          </div>
 
          <div className='css-image flex flex-col justify-center items-center'>
-            {/* <img src="/mahesh.jpeg" className='rounded-xl' /> */}
+            <img src="/ok.png" className='rounded-xl object-fit w-44' />
          </div>
 
          {/* socials */}
