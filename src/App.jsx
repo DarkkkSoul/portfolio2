@@ -6,6 +6,7 @@ import Skills from './components/Skills.jsx';
 import { useModal } from './Context/ModalContext.jsx';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import SmBento from './components/SmBento.jsx';
 
 function App() {
 
@@ -74,8 +75,11 @@ function App() {
                </div>
 
                {/* bento */}
-               <div className='w-full sm:mt-4 gsap-animate'>
+               <div className='w-full sm:mt-4 gsap-animate hidden sm:block'>
                   <Bento />
+               </div>
+               <div className='gsap-animate sm:hidden block'>
+                  <SmBento />
                </div>
 
                {/* projects */}

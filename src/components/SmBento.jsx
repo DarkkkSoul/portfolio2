@@ -7,7 +7,8 @@ import musicArray from '../Arrays/musics'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
-function Bento() {
+
+function SmBento() {
 
    const { isOpen, setIsOpen } = useModal();
    const [isCopied, setIsCopied] = useState(false);
@@ -51,16 +52,15 @@ function Bento() {
    }, [isOpen]);
 
    return (
-      <div className='css-bento w-ful h-full *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
-
+      <div className='flex flex-col gap-y-3 *:rounded-2xl *:shadow-lg/35 *:bg-lime-300/30 text-istok-400'>
          {/* Code lines */}
-         <div className='css-novel pl-2 flex flex-col items-start justify-center'>
+         <div className='flex flex-col py-4 px-6 items-start'>
             <div className='text-4xl text-istok-700'>20k+</div>
-            <div className='pl-5'>lines coded</div>
+            <div className=''>lines coded</div>
          </div>
 
          {/* Blog */}
-         <div className='css-blog flex flex-col justify-center pl-3'>
+         <div className='flex flex-col justify-center pl-3'>
             <p className='text-md'>I write</p>
             <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-3'>Blogs</p>
 
@@ -93,12 +93,12 @@ function Bento() {
 
          </div>
 
-         <div className='css-image flex flex-col justify-center items-center'>
+         <div className=' flex flex-col justify-center items-center'>
             <img src="/ok.png" className='rounded-xl object-fit w-44' />
          </div>
 
          {/* socials */}
-         <div className='css-social flex flex-col justify-center text-istok-400'>
+         <div className=' flex flex-col justify-center text-istok-400'>
             <div className='mx-auto text-md tracking-normal text-black font-extrabold'>Socials</div>
             <div className='flex px-1 items-center justify-evenly relative'>
                <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/linkedin.png" /></a>
@@ -111,7 +111,7 @@ function Bento() {
          </div>
 
          {/* Music */}
-         <div className='css-music flex flex-col justify-center items-center'>
+         <div className='flex flex-col justify-center items-center'>
             <div>
                <a onClick={handleMusic} href={music} target='_blank'>
                   <img src="music/music.png" className='rounded-xl w-40' />
@@ -123,4 +123,4 @@ function Bento() {
    )
 }
 
-export default Bento
+export default SmBento
