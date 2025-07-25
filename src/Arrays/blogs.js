@@ -11,60 +11,6 @@ const blogArray = [
         description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
         link: 'https://time-simplicity.hashnode.dev/time-simplicity',
     },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
-    {
-        id: 2,
-        title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
-        link: 'https://time-simplicity.hashnode.dev/time-simplicity',
-    },
 ]
 
 export default blogArray
