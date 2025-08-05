@@ -8,13 +8,13 @@ const blogArray = [
     {
         id: 2,
         title: 'Time Simplicity',
-        description: 'This is the quick go-through blog, to understand time complexity under 10 minutes.',
+        description: 'This is the quick go-through blog to understand time complexity under 10 minutes.',
         link: 'https://time-simplicity.hashnode.dev/time-simplicity',
     },
     {
         id: 3,
         title: 'Dockerfile simplified',
-        description: 'In this blog, I will be explaining the Dockerfile commands in a simple way, so that you can understand it easily.',
+        description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
         link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
     },
 ]

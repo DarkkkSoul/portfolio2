@@ -74,16 +74,16 @@ function SmBento() {
                <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-4'>Blogs</p>
             </div>
 
-            {/* {
+            {
                isOpen &&
-               <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
-                  <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
+               <div className='fixed -top-10 -left-13 -right-13 -bottom-10 z-50 flex items-start justify-end p-4 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
+                  <div className='w-full flex flex-col gap-y-3'>
 
-                     <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
+                     <div className='text-xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center text-left'>
                         Blogs
                      </div>
 
-                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
+                     <div className='grid grid-cols-1 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
                         {blogArray.map((blog, i) => (
                            <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
                         ))}
@@ -91,21 +91,26 @@ function SmBento() {
                   </div>
 
                   <button
-                     className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
+                     className='absolute top-2 right-2 z-50 cursor-pointer'
                      onClick={() => setIsOpen(false)}
                   >
-                     <img src="/close.png" className='w-8 sm:w-9' />
+                     <img src="/close.png" className='w-8' />
                   </button>
+
                </div>
-            } */}
+            }
          </div>
 
          <div className='css-sm-image flex flex-col justify-center items-center'>
-            <img src="/ok.png" className='rounded-xl object-fill' />
+            <img src="/sm-okaru.png" className='rounded-xl object-fit' />
          </div>
 
-         <div className='css-sm-music'>
-            song
+         <div className='css-sm-music flex flex-col justify-center items-center'>
+            <div>
+               <a onClick={handleMusic} href={music} target='_blank'>
+                  <img src="music/sm-music.png" className='rounded-xl' />
+               </a>
+            </div>
          </div>
 
       </div>
