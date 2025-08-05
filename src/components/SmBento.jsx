@@ -74,7 +74,7 @@ function SmBento() {
             <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
             <a href="https://github.com/darkkksoul" target='_blank' className='w-8'><img src="/Icons/github.png" /></a>
             <img src="/Icons/gmail.png" onClick={() => handleCopy('maheshh.kumar1508@gmail.com')} className='w-8' />
-            <a href="https://drive.google.com/file/d/1B4ljFvLkta-UpOaGXlq7GY3kVQiqE_fH/view?usp=sharing" target='_blank' className='w-7.5'><img src="/Icons/resume.png" /></a>
+            <a href="https://drive.google.com/file/d/1E5ydsIJCTV1XlBtbbCAUU7PpfcLVw179/view?usp=sharing" target='_blank' className='w-7.5'><img src="/Icons/resume.png" /></a>
          </div>
 
          {/* Lines */}
