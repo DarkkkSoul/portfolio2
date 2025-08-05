@@ -11,8 +11,6 @@ function SmBento() {
 
    const { isOpen, setIsOpen } = useModal();
    const [isCopied, setIsCopied] = useState(false);
-   const [music, setMusic] = useState('');
-   let [musicIndex, setMusicIndex] = useState(0);
 
    useGSAP(() => {
       gsap.from('.gsap-copy', {
@@ -22,25 +20,43 @@ function SmBento() {
       })
    }, [isCopied]);
 
-   const handleMusic = () => {
-      let next = musicIndex + 1;
-      if (next > musicArray.length - 1) next = 0;
-      setMusicIndex(next);
-      setMusic(musicArray[next]);
-   }
+   const handleCopy = async (text) => {
+      try {
+         // Primary method: Clipboard API
+         await navigator.clipboard.writeText(text);
+         setIsCopied(true);
+         alert('Email copied to clipboard.');
+      } catch (err) {
+         // Fallback method for unsupported or restricted environments (e.g. iOS Safari)
+         const textArea = document.createElement("textarea");
+         textArea.value = text;
 
-   const handleCopy = (text) => {
-      navigator.clipboard.writeText(text);
-      setIsCopied(true);
-      console.log(isCopied);
-   }
-   useEffect(() => {
-      if (isCopied) {
-         setTimeout(() => {
-            setIsCopied(false);
-         }, 800);
+         // Avoid scrolling to bottom
+         textArea.style.position = "fixed";
+         textArea.style.top = 0;
+         textArea.style.left = 0;
+
+         document.body.appendChild(textArea);
+         textArea.focus();
+         textArea.select();
+
+         try {
+            const successful = document.execCommand('copy');
+            if (successful) {
+               setIsCopied(true);
+               alert('Email copied to clipboard.');
+            } else {
+               throw new Error('Fallback copy failed.');
+            }
+         } catch (fallbackErr) {
+            console.error('Copy failed', fallbackErr);
+            alert('Failed to copy email. Please copy manually.');
+         }
+
+         document.body.removeChild(textArea);
       }
-   }, [isCopied]);
+   };
+
 
    useEffect(() => {
       if (isOpen) {
@@ -57,7 +73,7 @@ function SmBento() {
          <div className='css-sm-social flex flex-col items-center justify-evenly'>
             <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
             <a href="https://github.com/darkkksoul" target='_blank' className='w-8'><img src="/Icons/github.png" /></a>
-            <img src="/Icons/gmail.png" onClick={() => { handleCopy('maheshh.kumar1508@gmail.com') }} className='w-8' />
+            <img src="/Icons/gmail.png" onClick={() => handleCopy('maheshh.kumar1508@gmail.com')} className='w-8' />
             <a href="https://drive.google.com/file/d/1B4ljFvLkta-UpOaGXlq7GY3kVQiqE_fH/view?usp=sharing" target='_blank' className='w-7.5'><img src="/Icons/resume.png" /></a>
          </div>
 
@@ -79,7 +95,7 @@ function SmBento() {
                <div className='fixed -top-10 -left-13 -right-13 -bottom-10 z-50 flex items-start justify-end p-4 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
                   <div className='w-full flex flex-col gap-y-3'>
 
-                     <div className='text-xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center text-left'>
+                     <div className='text-xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-left'>
                         Blogs
                      </div>
 
@@ -105,9 +121,10 @@ function SmBento() {
             <img src="/sm-okaru.png" className='rounded-xl object-fit' />
          </div>
 
+         {/* Music */}
          <div className='css-sm-music flex flex-col justify-center items-center'>
             <div>
-               <a onClick={handleMusic} href={music} target='_blank'>
+               <a href='https://www.youtube.com/watch?v=fLexgOxsZu0' target='_blank'>
                   <img src="music/sm-music.png" className='rounded-xl' />
                </a>
             </div>
