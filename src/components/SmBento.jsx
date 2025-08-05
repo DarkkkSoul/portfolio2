@@ -6,8 +6,6 @@ import { useModal } from '../Context/ModalContext'
 import musicArray from '../Arrays/musics'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { div } from 'motion/react-client'
-
 
 function SmBento() {
 
@@ -53,55 +51,64 @@ function SmBento() {
    }, [isOpen]);
 
    return (
-      // <div className='w-full h-full text-istok-400'>
+      <div className='css-sm-bento h-full *:shadow-lg/35 *:bg-lime-300/30 *:rounded-2xl text-istok-400'>
 
-      //    <div className='shadow-lg/35 bg-lime-300/30'>
-      //       <div className='text-3xl text-istok-700 '>20k+</div>
-      //       <div className=''>lines coded</div>
-      //    </div>
+         {/* Socials */}
+         <div className='css-sm-social flex flex-col items-center justify-evenly'>
+            <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
+            <a href="https://github.com/darkkksoul" target='_blank' className='w-8'><img src="/Icons/github.png" /></a>
+            <img src="/Icons/gmail.png" onClick={() => { handleCopy('maheshh.kumar1508@gmail.com') }} className='w-8' />
+            <a href="https://drive.google.com/file/d/1B4ljFvLkta-UpOaGXlq7GY3kVQiqE_fH/view?usp=sharing" target='_blank' className='w-7.5'><img src="/Icons/resume.png" /></a>
+         </div>
 
-      //    <div className='flex flex-col shadow-lg/35 bg-lime-300/30'>
-      //       <p className='text-md'>I write</p>
-      //       <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-3'>Blogs</p>
-      //       {
-      //          isOpen &&
-      //          <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
-      //             <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
+         {/* Lines */}
+         <div className='css-sm-novel flex flex-col items-start justify-center'>
+            <div className='text-3xl text-istok-700 pl-3'>20k+</div>
+            <div className='pl-7 text-sm'>lines coded</div>
+         </div>
 
-      //                <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
-      //                   Blogs
-      //                </div>
+         {/* Blogs */}
+         <div className='css-sm-blog flex flex-col justify-center'>
+            <div>
+               <p className='text-sm pl-3'>I write</p>
+               <p onClick={() => { setIsOpen(true) }} className='text-5xl text-istok-700 underline cursor-pointer pl-4'>Blogs</p>
+            </div>
 
-      //                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
-      //                   {blogArray.map((blog, i) => (
-      //                      <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
-      //                   ))}
-      //                </div>
-      //             </div>
+            {/* {
+               isOpen &&
+               <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
+                  <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
 
-      //             <button
-      //                className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
-      //                onClick={() => setIsOpen(false)}
-      //             >
-      //                <img src="/close.png" className='w-8 sm:w-9' />
-      //             </button>
-      //          </div>
-      //       }
-      //    </div>
+                     <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
+                        Blogs
+                     </div>
 
-      //    <div>
+                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
+                        {blogArray.map((blog, i) => (
+                           <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
+                        ))}
+                     </div>
+                  </div>
 
-      //    </div>
+                  <button
+                     className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
+                     onClick={() => setIsOpen(false)}
+                  >
+                     <img src="/close.png" className='w-8 sm:w-9' />
+                  </button>
+               </div>
+            } */}
+         </div>
 
-      //    <div>
+         <div className='css-sm-image flex flex-col justify-center items-center'>
+            <img src="/ok.png" className='rounded-xl object-fill' />
+         </div>
 
-      //    </div>
+         <div className='css-sm-music'>
+            song
+         </div>
 
-      //    <div>
-
-      //    </div>
-      // </div>
-      <div></div>
+      </div>
    )
 }
 

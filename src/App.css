@@ -1,3 +1,4 @@
+/* Laptop view */
 .css-bento {
     display: grid;
     gap: 0.7rem;
@@ -38,6 +39,44 @@
 .css-music {
     grid-area: music;
 }
+
+/* Mobile view  */
+.css-sm-bento {
+    display: grid;
+    gap: 0.4rem;
+    justify-self: center;
+    align-self: center;
+
+    grid-template-columns: 4rem 1.7rem 5rem 1rem 0.5rem;
+    grid-template-rows: 2rem 4.5rem 6rem 6rem;
+
+    grid-template-areas: 'sm-social . . . .'
+        'sm-social sm-novel sm-novel . .'
+        'sm-social sm-blog sm-blog sm-blog sm-blog'
+        'sm-image sm-image sm-music sm-music .';
+}
+
+.css-sm-social {
+    grid-area: sm-social;
+}
+
+.css-sm-novel {
+    grid-area: sm-novel;
+}
+
+.css-sm-blog {
+    grid-area: sm-blog;
+}
+
+.css-sm-image {
+    grid-area: sm-image;
+}
+
+.css-sm-music {
+    grid-area: sm-music;
+}
+
+
 
 /* FONTS */
 .text-istok-400 {
