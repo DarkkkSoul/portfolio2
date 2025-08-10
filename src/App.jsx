@@ -54,7 +54,7 @@ function App() {
                </div>
 
                {/* Todo npm */}
-               <div className="flex items-center gap-x-4 sm:mt-8 gap-3 bg-lime-300/30 text-black font-mono px-4 py-2 rounded-lg shadow-lg/27 shadow-amber-400/60 border-2 border-white/40  cursor-text select-all">
+               <div className="flex items-center gap-x-4 sm:mt-8 mt-6 mb-5 gap-3 bg-lime-300/30 text-black font-mono px-4 py-2 rounded-lg shadow-lg/27 shadow-amber-400/60 border-2 border-white/40  cursor-text select-all">
                   <code className='font-semibold'>npm i -g todo-in-cli</code>
                   <img
                      src="/copy.png"
