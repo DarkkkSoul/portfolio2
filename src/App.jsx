@@ -10,17 +10,15 @@ import SmBento from './components/SmBento.jsx';
 
 function App() {
 
-   useGSAP(() => {
+   // useGSAP(() => {
 
-      gsap.from('.gsap-animate', {
-         yPercent: 50,
-         opacity: 0,
-         duration: 0.8,
-         stagger: 0.05,
-      })
-
-
-   }, []);
+   //    gsap.from('.gsap-animate', {
+   //       yPercent: 50,
+   //       opacity: 0,
+   //       duration: 0.8,
+   //       stagger: 0.05,
+   //    })
+   // }, []);
 
    const { isOpen } = useModal();
    return (
@@ -55,8 +53,22 @@ function App() {
                   <Skills />
                </div>
 
+               {/* Todo npm */}
+               <div className="flex items-center gap-x-4 sm:mt-8 gap-3 bg-lime-300/30 text-black font-mono px-4 py-2 rounded-lg shadow-lg/27 shadow-amber-400/60 border-2 border-white/40  cursor-text select-all">
+                  <code className='font-semibold'>npm i -g todo-in-cli</code>
+                  <img
+                     src="/copy.png"
+                     className="w-5 cursor-pointer hover:scale-110 active:scale-95 transition-transform"
+                     onClick={() => {
+                        navigator.clipboard.writeText('npm i -g todo-in-cli');
+                     }}
+                     alt="Copy command"
+                  />
+               </div>
+
+
                {/* Hire me */}
-               <div className='max-w-2xl flex flex-col text-istok-400 sm:gap-y-0.5 gap-y-1 sm:mt-3 gsap-animate'>
+               <div className='max-w-2xl flex flex-col text-istok-400 sm:gap-y-0.5 gap-y-1 sm:mt-2 gsap-animate'>
                   <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 mb-1 sm:mb-0'>Hire me</div>
                   <div className='text-md sm:text-lg tracking-tight'>
                      <div>Have an idea? I can bring it live within weeks. Looking for a person who has immense attraction towards coding? I’m here. I’m available for internships & freelancing gigs.</div>
