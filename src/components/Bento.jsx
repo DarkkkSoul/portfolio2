@@ -103,7 +103,7 @@ function Bento() {
                <a href="https://github.com/darkkksoul" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/github.png" /></a>
                <img src="/Icons/discord.png" onClick={() => { handleCopy('darkk.soul_') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
                <img src="/Icons/gmail.png" onClick={() => { handleCopy('maheshh.kumar1508@gmail.com') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
-               <a href="https://drive.google.com/file/d/1_2HOFOoLY8wd35a5Q2iDfIzJRVyGXFmR/view?usp=drive_link" target='_blank' className='w-7.5 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/resume.png" /></a>
+               <a href="https://drive.google.com/file/d/1dcbpIeedksKAY6yg8mwrmJIYSmBFc5R9/view?usp=sharing" target='_blank' className='w-7.5 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/resume.png" /></a>
                <p className={`absolute -top-9 right-5 text-sm bg-white/80 p-1.5 leading-none rounded-md tracking-wide ${isCopied ? 'block' : 'hidden'} text-istok-400 gsap-copy`}>copied!</p>
             </div>
          </div>

@@ -5,9 +5,9 @@ function ProjectComponent(props) {
 
     // const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className='rounded-lg flex sm:flex-row flex-col sm:items-center sm:justify-between gap-x-4 gap-y-1.5 duration-300 text-black px-4 sm:py-3 py-4 shadow-2xl/45 hover:shadow text-istok-400 sm:w-lg w-full relative' key={props.pid}>
+        <div className='rounded-lg flex sm:flex-row flex-col sm:items-center sm:justify-between gap-x-4 gap-y-1.5 duration-300 text-black px-4 sm:py-3 py-4 shadow-2xl/45 hover:shadow text-istok-400 sm:w-xl w-full relative' key={props.pid}>
 
-            <div className='sm:w-106 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
+            <div className='sm:max-w-11/12 flex items-baseline flex-col gap-y-2 pl-1 py-1 text-black'>
 
                 <div className='text-lg font-semibold flex items-center justify-between gap-x-1.5 '>
                     <div>{props.title}</div>
