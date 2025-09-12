@@ -53,7 +53,7 @@ function App() {
                      <div className='flex flex-col sm:gap-y-1 gap-y-1.5'>
                         <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 gsap-welcome'>Welcomeoi,</div>
                         <p className='sm:text-lg text-md sm:tracking-tight'>
-                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a 19 year old web developer from India. I love building <span className='font-extrabold'>interactive, unique and scalable</span> interfaces using  <span className='text-lime-800 drop-shadow-lg drop-shadow-amber-200 font-extrabold'>MERN</span> stack. I work solo and fast, mostly with Javascript frameworks.
+                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a 20 year old web developer based in India. I love building <span className='font-extrabold'>interactive, unique and scalable</span> products. I work solo and fast, mostly with Javascript frameworks.
                         </p>
                      </div>
                   </div>
