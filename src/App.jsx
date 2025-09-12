@@ -6,18 +6,34 @@ import Skills from './components/Skills.jsx';
 import { useModal } from './Context/ModalContext.jsx';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+gsap.registerPlugin(useGSAP);
 import SmBento from './components/SmBento.jsx';
 
 function App() {
 
    useGSAP(() => {
+      const ctx = gsap.context(() => {
+         gsap.set('.gsap-animate', {
+            yPercent: 50,
+            autoAlpha: 0,
+            willChange: 'transform, opacity',
+            force3D: true,
+         });
 
-      gsap.from('.gsap-animate', {
-         yPercent: 50,
-         opacity: 0,
-         duration: 0.8,
-         stagger: 0.05,
-      })
+         requestAnimationFrame(() => {
+            gsap.to('.gsap-animate', {
+               yPercent: 0,
+               autoAlpha: 1,
+               duration: 0.9,
+               stagger: 0.06,
+               ease: 'power2.out',
+               force3D: true,
+               lazy: false,
+               clearProps: 'willChange',
+            });
+         });
+      });
+      return () => ctx.revert();
    }, []);
 
    const { isOpen } = useModal();
