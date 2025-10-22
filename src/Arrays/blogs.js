@@ -17,6 +17,18 @@ const blogArray = [
         description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
         link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
     },
+    {
+        id: 3,
+        title: 'Dockerfile simplified',
+        description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
+        link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
+    },
+    {
+        id: 3,
+        title: 'Dockerfile simplified',
+        description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
+        link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
+    },
 ]
 
 export default blogArray
