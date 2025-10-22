@@ -108,6 +108,7 @@ function App() {
                   <SmBento />
                </div>
 
+
                {/* projects */}
                <div className='w-full flex flex-col text-istok-400 gap-y-5 sm:mt-5 mt-3 gsap-animate'>
                   <div className='px-13 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Projects</div>
