@@ -112,10 +112,10 @@ function App() {
                {/* projects */}
                <div className='w-full flex flex-col text-istok-400 gap-y-5 sm:mt-5 mt-3 gsap-animate'>
                   <div className='px-13 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Projects</div>
-                  <div className='grid grid-cols-1 items-center sm:gap-y-6 gap-y-4 mx-auto'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start mx-auto'>
                      {
                         projects.map((project) => (
-                           <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} link={project.link} demo={project.demo} />
+                           <ProjectComponent key={project.pid} id={project.pid} title={project.title} description={project.description} tech={project.tech} link={project.link} demo={project.demo} code={project.code} image={project.image} />
                         ))
                      }
                   </div>
