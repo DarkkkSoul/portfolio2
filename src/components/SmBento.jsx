@@ -71,7 +71,7 @@ function SmBento() {
 
          {/* Socials */}
          <div className='css-sm-social flex flex-col items-center justify-evenly'>
-            <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
+            <a href="https://www.linkedin.com/in/maheshkgdev/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
             <a href="https://github.com/darkkksoul" target='_blank' className='w-8'><img src="/Icons/github.png" /></a>
             <img src="/Icons/gmail.png" onClick={() => handleCopy('maheshh.kumar1508@gmail.com')} className='w-8' />
             <a href="https://drive.google.com/file/d/1dcbpIeedksKAY6yg8mwrmJIYSmBFc5R9/view?usp=sharing" target='_blank' className='w-7.5'><img src="/Icons/resume.png" /></a>

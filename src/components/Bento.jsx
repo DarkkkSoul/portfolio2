@@ -99,7 +99,7 @@ function Bento() {
          <div className='css-social flex flex-col justify-center text-istok-400'>
             <div className='mx-auto text-md tracking-normal text-black font-extrabold'>Socials</div>
             <div className='flex px-1 items-center justify-evenly relative'>
-               <a href="https://www.linkedin.com/in/maheshhkumarg/" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/linkedin.png" /></a>
+               <a href="https://www.linkedin.com/in/maheshkgdev/" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/linkedin.png" /></a>
                <a href="https://github.com/darkkksoul" target='_blank' className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90'><img src="/Icons/github.png" /></a>
                <img src="/Icons/discord.png" onClick={() => { handleCopy('darkk.soul_') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
                <img src="/Icons/gmail.png" onClick={() => { handleCopy('maheshh.kumar1508@gmail.com') }} className='w-8 hover:scale-105 hover:-translate-y-2 transition-all cursor-pointer active:scale-90' />
