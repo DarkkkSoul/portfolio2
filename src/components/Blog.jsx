@@ -7,7 +7,7 @@ function Blog({ title, description, link }) {
             <div className='flex justify-between'>
                 <div className='w-44 text-istok-700 text-md'>{title}</div>
                 <div>
-                    <a href={link} target='_blank'><img src="/view.png" className='w-4 pt-0.5' /></a>
+                    <a href={link} target='_blank'><img src="/utils/view.png" className='w-4 pt-0.5' /></a>
                 </div>
             </div>
 

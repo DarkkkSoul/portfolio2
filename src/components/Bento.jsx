@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import '../App.css'
+import '../styles/App.css'
 import Blog from './Blog'
 import blogArray from '../Arrays/blogs'
 import { useModal } from '../Context/ModalContext'
@@ -84,7 +84,7 @@ function Bento() {
                      className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
                      onClick={() => setIsOpen(false)}
                   >
-                     <img src="/close.png" className='w-8 sm:w-9' />
+                     <img src="/utils/close.png" className='w-8 sm:w-9' />
                   </button>
                </div>
             }
@@ -92,7 +92,7 @@ function Bento() {
 
          {/* okaru photo */}
          <div className='css-image flex flex-col justify-center items-center'>
-            <img src="/ok.png" className='rounded-xl object-fit w-44' />
+            <img src="/utils/ok.png" className='rounded-xl object-fit w-44' />
          </div>
 
          {/* socials */}

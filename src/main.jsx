@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import './App.css'
+import './styles/App.css'
+import './styles/fonts.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { ModalProvider } from './Context/ModalContext.jsx'
 

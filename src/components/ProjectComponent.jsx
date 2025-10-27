@@ -1,66 +1,72 @@
-import React from 'react'
-
 function ProjectComponent(props) {
     return (
-        <div className='w-full max-w-md sm:max-w-sm mx-auto rounded-xl border border-white/60 bg-lime-400/20 backdrop-blur-sm p-4 sm:p-4 shadow-2xl/45 hover:shadow-lg transition text-istok-400' key={props.pid}>
+        <div className='w-full bg-lime-400/20 backdrop-blur-sm rounded-lg border border-white/60 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300' key={props.pid}>
 
-            <div className='flex flex-col gap-2'>
+            {/* image - no padding */}
+            <div className='w-full aspect-[2/1] overflow-hidden'>
+                <img src={props.image} alt={props.title} className='w-full h-full object-cover' />
+            </div>
 
-                {/* image */}
-                <div className='w-full mb-1'>
-                    <div className='relative rounded-lg aspect-[16/10] overflow-hidden'>
-                        <img src={props.image} alt={props.title} className='w-full h-full object-cover' />
-                    </div>
-                </div>
-
+            {/* content */}
+            <div className='p-3'>
                 {/* title */}
-                <div className='flex items-start pl-1'>
-                    <div className='text-xl sm:text-xl tracking-normal font-extrabold text-black'>
-                        {props.title}
-                    </div>
-                </div>
+                <h3 className='text-sm font-bold text-black mb-1.5 line-clamp-1'>
+                    {props.title}
+                </h3>
 
                 {/* description */}
-                <div className='text-sm sm:text-base text-black/80 leading-5.5 mb-1 pl-1'>
+                <p className='text-xs text-black/80 leading-tight mb-2'>
                     {props.description}
-                </div>
+                </p>
 
-                {/* tech */}
-                <div className='flex flex-row gap-1.5 flex-wrap pl-1'>
-                    {props.tech.map((t, i) => (
-                        <div key={i} className='text-xs sm:text-sm text-black border-t border-b-zinc-100/70 border-b border-black/20 bg-emerald-400/10 backdrop-blur-md rounded-md py-1 px-2 shadow-lg/45'>
+                {/* tech stack */}
+                <div className='flex flex-wrap gap-1 mb-2'>
+                    {props.tech.slice(0, 4).map((t, i) => (
+                        <span key={i} className='text-xs bg-emerald-400/20 text-black px-1.5 py-0.5 rounded border border-black/10'>
                             {t}
-                        </div>
+                        </span>
                     ))}
+                    {props.tech.length > 4 && (
+                        <span className='text-xs text-black/60'>+{props.tech.length - 4}</span>
+                    )}
                 </div>
 
-                {/* links */}
-                {(props.demo || props.link || props.code) && (
-                    <div className='flex flex-col gap-1 pt-1 pl-1'>
-                        <div className='text-sm font-semibold text-black/80'>Links:</div>
-                        <div className='flex items-center gap-2 flex-wrap'>
-                            {props.link && (
-                                <a href={props.link} target="_blank" className='inline-flex items-center gap-1.5 rounded-md border-b border-b-white/90 bg-zinc-200 px-3 py-1 text-sm hover:bg-black/40 hover:text-white active:scale-95 transition cursor-pointer'>
-                                    <img src='/link.png' className='w-4' />
-                                    <span>Website</span>
-                                </a>
-                            )}
-                            {props.demo && (
-                                <a href={props.demo} target="_blank" className='inline-flex items-center gap-1.5 rounded-md border-b border-b-white/90 bg-zinc-200 px-3 py-1 text-sm hover:bg-black/40 hover:text-white active:scale-95 transition cursor-pointer'>
-                                    <img src='/demo.png' className='w-4' />
-                                    <span>Preview</span>
-                                </a>
-                            )}
-
-                            {props.code && (
-                                <a href={props.code} target="_blank" className='inline-flex items-center gap-1.5 rounded-md border-b border-b-white/90 bg-zinc-200 px-3 py-1 text-sm hover:bg-black/40 hover:text-white active:scale-95 transition cursor-pointer'>
-                                    <img src='/Icons/github.png' className='w-4' />
-                                    <span>Code</span>
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                )}
+                {/* action buttons */}
+                <div className='flex gap-1.5'>
+                    {props.code && (
+                        <a
+                            href={props.code}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='inline-flex items-center gap-1 bg-zinc-200 text-black px-2 py-1 rounded text-xs font-medium hover:bg-black/40 hover:text-white transition-colors'
+                        >
+                            <img src='/Icons/github.png' className='w-3 h-3' alt="GitHub" />
+                            Source
+                        </a>
+                    )}
+                    {props.demo && (
+                        <a
+                            href={props.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='inline-flex items-center gap-1 bg-zinc-200 text-black px-2 py-1 rounded text-xs font-medium hover:bg-black/40 hover:text-white transition-colors'
+                        >
+                            <img src='/utils/demo.png' className='w-3 h-3' alt="Demo" />
+                            Demo
+                        </a>
+                    )}
+                    {props.link && (
+                        <a
+                            href={props.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='inline-flex items-center gap-1 bg-zinc-200 text-black px-2 py-1 rounded text-xs font-medium hover:bg-black/40 hover:text-white transition-colors'
+                        >
+                            <img src='/utils/link.png' className='w-3 h-3' alt="Website" />
+                            Website
+                        </a>
+                    )}
+                </div>
             </div>
         </div>
     )

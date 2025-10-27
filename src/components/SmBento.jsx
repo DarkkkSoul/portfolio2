@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import '../App.css'
+import '../styles/App.css'
 import Blog from './Blog'
 import blogArray from '../Arrays/blogs'
 import { useModal } from '../Context/ModalContext'
@@ -110,7 +110,7 @@ function SmBento() {
                      className='absolute top-2 right-2 z-50 cursor-pointer'
                      onClick={() => setIsOpen(false)}
                   >
-                     <img src="/close.png" className='w-8' />
+                     <img src="/utils/close.png" className='w-8' />
                   </button>
 
                </div>
@@ -118,7 +118,7 @@ function SmBento() {
          </div>
 
          <div className='css-sm-image flex flex-col justify-center items-center'>
-            <img src="/sm-okaru.png" className='rounded-xl object-fit' />
+            <img src="/utils/sm-okaru.png" className='rounded-xl object-fit' />
          </div>
 
          {/* Music */}

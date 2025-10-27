@@ -75,25 +75,3 @@
 .css-sm-music {
     grid-area: sm-music;
 }
-
-
-
-/* FONTS */
-.text-istok-400 {
-    font-family: "Istok Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.text-istok-700 {
-    font-family: "Istok Web", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.text-sans {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
