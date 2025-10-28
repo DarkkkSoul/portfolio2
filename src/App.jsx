@@ -67,8 +67,8 @@ function App() {
                </div>
 
                {/* projects */}
-               <div className='w-full flex flex-col text-istok-400 gap-y-4 sm:mt-5 mt-3 gsap-animate'>
-                  <div className='px-13 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400'>Projects</div>
+               <div className='w-full flex flex-col gap-y-4 sm:mt-5 mt-3 gsap-animate'>
+                  <div className='sm:px-13 px-3 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope'>Projects</div>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto px-4 sm:px-0'>
                      {
                         projects.map((project) => (
@@ -79,12 +79,12 @@ function App() {
                </div>
 
                {/* skills */}
-               <div className=' sm:px-13 text-istok-400 sm:mt-1 gsap-animate'>
+               <div className='sm:px-13 sm:mt-1 gsap-animate'>
                   <Skills />
                </div>
 
                {/* rengoku */}
-               <div className='text-istok-400 sm:text-xl text-md tracking-normal sm:mt-2 mt-3 gsap-animate'>
+               <div className='font-manrope-400 sm:text-lg text-md tracking-normal sm:mt-2 mt-3 gsap-animate'>
                   <div className='inline'>
                      I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben <span className='inline-block align-middle'> <img src="/utils/sound.png" className='sm:w-5 w-6 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} /></span>.
                      <audio id='sound1' src="/utils/umai.mp3"></audio>
@@ -100,9 +100,9 @@ function App() {
                </div>
 
                {/* Hire me */}
-               <div className='sm:px-13 flex flex-col text-istok-400 gap-y-1 sm:mt-2 gsap-animate'>
-                  <div className='sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 mb-1'>Hire me</div>
-                  <div className='text-md sm:text-lg tracking-normal text-sans'>
+               <div className='sm:px-13 flex flex-col gap-y-1 mt-3 gsap-animate pb-80'>
+                  <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1'>Hire me</div>
+                  <div className='text-md sm:text-lg font-inter-400'>
                      <div>Have an idea? I can bring it live within weeks. Looking for a person who has immense attraction towards coding? I’m here. I’m available for internships & freelancing gigs.</div>
                      <div className='font-bold'>I code first, talk later.</div>
                   </div>

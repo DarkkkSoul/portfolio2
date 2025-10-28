@@ -13,7 +13,7 @@ const projects = [
         pid: 1,
         title: 'Bookmark Vault',
         description: 'Store and manage your bookmarks in a secure vault, with features to add and delete bookmarks, with a user-friendly interface',
-        tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+        tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'MongoDB', 'MongoDB'],
         demo: '',
         link: 'https://bookmark-vault.vercel.app/',
         code: 'https://github.com/DarkkkSoul/Bookmark-Vault',
