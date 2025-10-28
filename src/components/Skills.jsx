@@ -7,7 +7,7 @@ function Skills() {
 
     return (
         <div className='flex flex-col gap-y-3'>
-            <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1'>Skills</div>
+            <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1'>Tech Stack</div>
             <div className='flex flex-wrap items-center gap-x-2 gap-y-2.5 *:bg-lime-300/30 font-manrope'>
 
                 {

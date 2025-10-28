@@ -52,12 +52,14 @@ function App() {
 
                   <div className='sm:w-2/3'>
                      <div className='flex flex-col sm:gap-y-1 gap-y-1.5'>
-                        <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 gsap-welcome'>Welcomeoi,</div>
-                        <p className='sm:text-lg text-md text-sans'>
-                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a full stack developer, based in India.  I love building interactive & scalable products, I love structuring complex backends. I started my web development journey at Septermber 2024 where I built countless amount of projects which made my foundations strong enough that I can learn any new things within weeks. I work solo and fast, mostly with Javascript frameworks.
-                           You will see me posting about backend designing, and exploring new technologies.
-                           Currently, I'm deep diving into React and planning to swift my career towards AI where I can take my projects to next level by integrating AI.
+                        <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 gsap-welcome font-manrope-600'>Welcomeoi,</div>
+
+                        <p className='sm:text-lg text-md font-inter-400'>
+                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a full stack developer, based in India.  I love building interactive & scalable products, I love structuring <span className='underline underline-offset-4 decoration-amber-700/80 decoration-2'>complex backends</span>. <br />I started my web development journey around Septermber 2024 where I built countless projects which made my foundations strong enough that I can learn any new things within days. <br />I work solo and fast, mostly with <span className='underline underline-offset-4 decoration-yellow-400/80 decoration-[0.16rem]'>Javascript frameworks</span>.
+                           You will see me posting about backend designing and exploring new technologies publically.
+                           <br />Currently, I'm deep diving into React and planning to shift my career toward Gen AI where I can take my projects to next level by integrating AI.
                         </p>
+
                      </div>
                   </div>
 
@@ -68,7 +70,7 @@ function App() {
 
                {/* projects */}
                <div className='w-full flex flex-col gap-y-4 sm:mt-5 mt-3 gsap-animate'>
-                  <div className='sm:px-13 px-3 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope'>Projects</div>
+                  <div className='sm:px-13 px-1 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope'>Projects I've Built</div>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto px-4 sm:px-0'>
                      {
                         projects.map((project) => (
@@ -100,7 +102,7 @@ function App() {
                </div>
 
                {/* Hire me */}
-               <div className='sm:px-13 flex flex-col gap-y-1 mt-3 gsap-animate pb-80'>
+               <div className='sm:px-13 flex flex-col gap-y-1 mt-3 gsap-animate'>
                   <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1'>Hire me</div>
                   <div className='text-md sm:text-lg font-inter-400'>
                      <div>Have an idea? I can bring it live within weeks. Looking for a person who has immense attraction towards coding? I’m here. I’m available for internships & freelancing gigs.</div>
@@ -108,13 +110,8 @@ function App() {
                   </div>
                </div>
 
-
-
-
-
-
                {/* footer */}
-               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 text-istok-400 sm:text-sm text-xs gsap-animate'>
+               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate'>
                   <hr className='w-2/3 border-1 border-lime-600 drop-shadow-lg ' />
                   <div className='flex sm:flex-row flex-col items-center gap-x-30 gap-y-1'>
                      <div>Peace Out!</div>
