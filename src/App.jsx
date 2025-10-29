@@ -128,7 +128,7 @@ function App() {
                </div>
 
                {/* footer */}
-               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate mb-80'>
+               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate'>
                   <hr className='w-2/3 border-1 border-lime-600 drop-shadow-lg ' />
                   <div className='flex sm:flex-row flex-col items-center gap-x-30 gap-y-1'>
                      <div>Peace Out!</div>
