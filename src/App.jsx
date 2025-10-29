@@ -39,6 +39,11 @@ function App() {
    const { isOpen } = useModal();
    return (
       <div>
+         {/* Under Development Tag */}
+         <div className="fixed top-6 sm:top-9 left-1/2 transform -translate-x-1/2 z-50 bg-amber-400/70 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm sm:text-md font-semibold shadow-lg border border-amber-400/50 font-playfair-700 tracking-widest ">
+            Under Development
+         </div>
+
          {isOpen && (
             <div className="fixed inset-0 backdrop-blur-lg bg-black/50 overflow-hidden" />
          )}
@@ -94,11 +99,23 @@ function App() {
                </div>
 
                {/* bento */}
-               <div className='w-full sm:mt-4 gsap-animate hidden sm:block'>
-                  <Bento />
+               <div className='w-full sm:mt-4 gsap-animate hidden sm:block relative'>
+                  <img src="/utils/construction.png" alt="" className='absolute top-9 -rotate-10 left-100 w-8 z-10' />
+                  <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-120 w-10 z-10' />
+                  <img src="/utils/roller.png" alt="" className='absolute top-32 right-80 w-10 z-10 -rotate-30' />
+
+                  <div className='blur-md'>
+                     <Bento />
+                  </div>
                </div>
-               <div className='gsap-animate sm:hidden block'>
-                  <SmBento />
+               <div className='gsap-animate sm:hidden block relative'>
+                  <img src="/utils/construction.png" alt="" className='absolute top-10 left-5 -rotate-10 w-7 z-10 ' />
+                  <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-16 w-9 -rotate-5 z-10' />
+                  <img src="/utils/roller.png" alt="" className='absolute top-30 right-11 w-8 -rotate-30 z-10' />
+
+                  <div className='blur-sm'>
+                     <SmBento />
+                  </div>
                </div>
 
                {/* Hire me */}
@@ -111,7 +128,7 @@ function App() {
                </div>
 
                {/* footer */}
-               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate'>
+               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate mb-80'>
                   <hr className='w-2/3 border-1 border-lime-600 drop-shadow-lg ' />
                   <div className='flex sm:flex-row flex-col items-center gap-x-30 gap-y-1'>
                      <div>Peace Out!</div>
