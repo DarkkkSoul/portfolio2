@@ -59,7 +59,7 @@ function ProjectComponent(props) {
                             rel="noopener noreferrer"
                             className='inline-flex items-center gap-1 bg-zinc-200 font-inter-400 px-2 py-1 rounded text-xs font-medium hover:bg-black/40 hover:text-white transition-colors'
                         >
-                            <img src='/utils/link.png' className='w-3 h-3' alt="Website" />
+                            <img src='/utils/website.png' className='w-3 h-3' alt="Website" />
                             Website
                         </a>
                     )}

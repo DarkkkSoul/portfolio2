@@ -104,7 +104,7 @@ function App() {
                   <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-120 w-10 z-10' />
                   <img src="/utils/roller.png" alt="" className='absolute top-32 right-80 w-10 z-10 -rotate-30' />
 
-                  <div className='blur-md'>
+                  <div className=''>
                      <Bento />
                   </div>
                </div>
