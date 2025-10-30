@@ -18,15 +18,9 @@ const blogArray = [
         link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
     },
     {
-        id: 3,
-        title: 'Dockerfile simplified',
-        description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
-        link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
-    },
-    {
-        id: 3,
-        title: 'Dockerfile simplified',
-        description: 'Building a Dockerfile is considered a daunting task, here I\'ll be explaning these commands in simpliest way.',
+        id: 4,
+        title: 'Understanding React Lifecycles',
+        description: 'React\’s lifecycle isn\’t just mount, update, unmount. Each phase has distinct methods that React executes internally. ',
         link: 'https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands',
     },
 ]

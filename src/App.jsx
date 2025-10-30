@@ -11,30 +11,30 @@ import SmBento from './components/SmBento.jsx';
 
 function App() {
 
-   // useGSAP(() => {
-   //    const ctx = gsap.context(() => {
-   //       gsap.set('.gsap-animate', {
-   //          yPercent: 50,
-   //          autoAlpha: 0,
-   //          willChange: 'transform, opacity',
-   //          force3D: true,
-   //       });
+   useGSAP(() => {
+      const ctx = gsap.context(() => {
+         gsap.set('.gsap-animate', {
+            yPercent: 50,
+            autoAlpha: 0,
+            willChange: 'transform, opacity',
+            force3D: true,
+         });
 
-   //       requestAnimationFrame(() => {
-   //          gsap.to('.gsap-animate', {
-   //             yPercent: 0,
-   //             autoAlpha: 1,
-   //             duration: 0.9,
-   //             stagger: 0.06,
-   //             ease: 'power2.out',
-   //             force3D: true,
-   //             lazy: false,
-   //             clearProps: 'willChange',
-   //          });
-   //       });
-   //    });
-   //    return () => ctx.revert();
-   // }, []);
+         requestAnimationFrame(() => {
+            gsap.to('.gsap-animate', {
+               yPercent: 0,
+               autoAlpha: 1,
+               duration: 0.9,
+               stagger: 0.06,
+               ease: 'power2.out',
+               force3D: true,
+               lazy: false,
+               clearProps: 'willChange',
+            });
+         });
+      });
+      return () => ctx.revert();
+   }, []);
 
    const { isOpen } = useModal();
    return (
@@ -45,7 +45,7 @@ function App() {
          </div>
 
          {isOpen && (
-            <div className="fixed inset-0 backdrop-blur-lg bg-black/50 overflow-hidden" />
+            <div className="fixed inset-0 backdrop-blur-3xl bg-black/60 overflow-hidden" />
          )}
 
          <div className='bg-gradient-to-br from-lime-400 from-0% via-green-300 via-60% to-lime-900 h-full w-full flex items-center justify-center sm:p-5 p-4'>

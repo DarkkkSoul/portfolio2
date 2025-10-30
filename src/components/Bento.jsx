@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/App.css'
 import Blog from './Blog'
 import blogArray from '../Arrays/blogs'
@@ -66,10 +66,10 @@ function Bento() {
 
             {
                isOpen &&
-               <div className='fixed inset-0 z-50 flex items-start justify-end p-4 sm:p-5 overflow-auto backdrop-blur-md bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
+               <div className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-100 flex p-4 sm:pt-5 pb-7 px-7 bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
                   <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
 
-                     <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left'>
+                     <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left font-manrope-400 tracking-wide'>
                         Blogs
                      </div>
 
