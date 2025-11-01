@@ -12,30 +12,30 @@ import NewBento from './components/NewBento.jsx';
 
 function App() {
 
-   // useGSAP(() => {
-   //    const ctx = gsap.context(() => {
-   //       gsap.set('.gsap-animate', {
-   //          yPercent: 50,
-   //          autoAlpha: 0,
-   //          willChange: 'transform, opacity',
-   //          force3D: true,
-   //       });
+   useGSAP(() => {
+      const ctx = gsap.context(() => {
+         gsap.set('.gsap-animate', {
+            yPercent: 50,
+            autoAlpha: 0,
+            willChange: 'transform, opacity',
+            force3D: true,
+         });
 
-   //       requestAnimationFrame(() => {
-   //          gsap.to('.gsap-animate', {
-   //             yPercent: 0,
-   //             autoAlpha: 1,
-   //             duration: 0.9,
-   //             stagger: 0.06,
-   //             ease: 'power2.out',
-   //             force3D: true,
-   //             lazy: false,
-   //             clearProps: 'willChange',
-   //          });
-   //       });
-   //    });
-   //    return () => ctx.revert();
-   // }, []);
+         requestAnimationFrame(() => {
+            gsap.to('.gsap-animate', {
+               yPercent: 0,
+               autoAlpha: 1,
+               duration: 0.9,
+               stagger: 0.06,
+               ease: 'power2.out',
+               force3D: true,
+               lazy: false,
+               clearProps: 'willChange',
+            });
+         });
+      });
+      return () => ctx.revert();
+   }, []);
 
    const { isOpen } = useModal();
    return (
@@ -107,7 +107,7 @@ function App() {
                </div>
 
                {/* bento */}
-               <div className='w-full flex gsap-animate justify-center items-center gsap-animate mt-6'>
+               <div className='w-full sm:flex gsap-animate justify-center items-center gsap-animate mt-6 hidden'>
                   <NewBento />
                </div>
 
