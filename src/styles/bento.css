@@ -37,3 +37,37 @@
 .div6 {
     grid-area: g6;
 }
+
+.sm-parent {
+    display: grid;
+    grid-template-columns: 4rem 6rem 3rem 3rem;
+    grid-template-rows: 6rem 5rem 6rem;
+    grid-template-areas: 'g1 g2 . .'
+        'g1 g3 g3 .'
+        'g4 g4 g5 g5';
+    gap: 7px;
+}
+
+.sm-parent>div {
+    border-radius: 0.5rem;
+}
+
+.d1 {
+    grid-area: g1;
+}
+
+.d2 {
+    grid-area: g2;
+}
+
+.d3 {
+    grid-area: g3;
+}
+
+.d4 {
+    grid-area: g4;
+}
+
+.d5 {
+    grid-area: g5;
+}

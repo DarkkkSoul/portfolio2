@@ -1,7 +1,6 @@
 import ProjectComponent from './components/ProjectComponent';
 import './styles/index.css';
 import projects from './Arrays/projects.js';
-import Bento from './components/Bento.jsx';
 import Skills from './components/Skills.jsx';
 import { useModal } from './Context/ModalContext.jsx';
 import { useGSAP } from '@gsap/react';
@@ -9,33 +8,34 @@ import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
 import SmBento from './components/SmBento.jsx';
 import NewBento from './components/NewBento.jsx';
+import NewSmBento from './components/NewSmBento.jsx';
 
 function App() {
 
-   useGSAP(() => {
-      const ctx = gsap.context(() => {
-         gsap.set('.gsap-animate', {
-            yPercent: 50,
-            autoAlpha: 0,
-            willChange: 'transform, opacity',
-            force3D: true,
-         });
+   // useGSAP(() => {
+   //    const ctx = gsap.context(() => {
+   //       gsap.set('.gsap-animate', {
+   //          yPercent: 50,
+   //          autoAlpha: 0,
+   //          willChange: 'transform, opacity',
+   //          force3D: true,
+   //       });
 
-         requestAnimationFrame(() => {
-            gsap.to('.gsap-animate', {
-               yPercent: 0,
-               autoAlpha: 1,
-               duration: 0.9,
-               stagger: 0.06,
-               ease: 'power2.out',
-               force3D: true,
-               lazy: false,
-               clearProps: 'willChange',
-            });
-         });
-      });
-      return () => ctx.revert();
-   }, []);
+   //       requestAnimationFrame(() => {
+   //          gsap.to('.gsap-animate', {
+   //             yPercent: 0,
+   //             autoAlpha: 1,
+   //             duration: 0.9,
+   //             stagger: 0.06,
+   //             ease: 'power2.out',
+   //             force3D: true,
+   //             lazy: false,
+   //             clearProps: 'willChange',
+   //          });
+   //       });
+   //    });
+   //    return () => ctx.revert();
+   // }, []);
 
    const { isOpen } = useModal();
    return (
@@ -111,7 +111,11 @@ function App() {
                   <NewBento />
                </div>
 
-               <div className='gsap-animate sm:hidden block relative'>
+               <div className='w-full flex gsap-animate justify-center items-center gsap-animate mt-6 sm:hidden'>
+                  <NewSmBento />
+               </div>
+
+               {/* <div className='gsap-animate sm:hidden block relative'>
                   <img src="/utils/construction.png" alt="" className='absolute top-10 left-5 -rotate-10 w-7 z-10 ' />
                   <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-16 w-9 -rotate-5 z-10' />
                   <img src="/utils/roller.png" alt="" className='absolute top-30 right-11 w-8 -rotate-30 z-10' />
@@ -119,7 +123,7 @@ function App() {
                   <div className='blur-sm'>
                      <SmBento />
                   </div>
-               </div>
+               </div> */}
 
                {/* Hire me */}
                <div className='sm:px-13 flex flex-col gap-y-4 mt-3 gsap-animate'>
