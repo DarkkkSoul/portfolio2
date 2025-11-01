@@ -1,0 +1,39 @@
+.parent {
+    display: grid;
+    grid-template-columns: 5rem 3rem 7rem 6rem 8rem 3rem;
+    grid-template-rows: 3rem 4rem 7rem 4rem 3rem;
+    grid-template-areas: 'g1 g1 g2 . . .'
+        'g1 g1 g2 g4 g4 .'
+        'g1 g1 g3 g3 g6 g6'
+        '. g5 g5 g5 g6 g6'
+        '. g5 g5 g5 . .';
+    gap: 8px;
+}
+
+.parent>div {
+    border-radius: 0.5rem;
+}
+
+.div1 {
+    grid-area: g1;
+}
+
+.div2 {
+    grid-area: g2;
+}
+
+.div3 {
+    grid-area: g3;
+}
+
+.div4 {
+    grid-area: g4;
+}
+
+.div5 {
+    grid-area: g5;
+}
+
+.div6 {
+    grid-area: g6;
+}

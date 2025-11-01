@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
 import SmBento from './components/SmBento.jsx';
+import NewBento from './components/NewBento.jsx';
 
 function App() {
 
@@ -108,6 +109,11 @@ function App() {
                      <Bento />
                   </div>
                </div>
+
+               <div className='w-full gsap-animate hidden'>
+                  <NewBento />
+               </div>
+
                <div className='gsap-animate sm:hidden block relative'>
                   <img src="/utils/construction.png" alt="" className='absolute top-10 left-5 -rotate-10 w-7 z-10 ' />
                   <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-16 w-9 -rotate-5 z-10' />
