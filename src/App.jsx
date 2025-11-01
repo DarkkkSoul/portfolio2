@@ -75,8 +75,15 @@ function App() {
                </div>
 
                {/* projects */}
-               <div className='w-full flex flex-col gap-y-4 sm:mt-5 mt-3 gsap-animate'>
-                  <div className='sm:px-13 px-1 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope'>Projects I've Built</div>
+               <div className='w-full flex flex-col gap-y-7 sm:mt-5 mt-3 gsap-animate'>
+                  <div className='sm:px-13 px-1 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope relative inline-block'>
+                     <span className="relative z-10 px-3 py-1">Projects I've Built
+                        <div className="absolute inset-0 border-2 border-transparent">
+                           <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-teal-600"></div>
+                           <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-teal-600"></div>
+                        </div>
+                     </span>
+                  </div>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto px-4 sm:px-0'>
                      {
                         projects.map((project) => (
@@ -115,8 +122,16 @@ function App() {
                </div>
 
                {/* Hire me */}
-               <div className='sm:px-13 flex flex-col gap-y-1 mt-3 gsap-animate'>
-                  <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1'>Hire me</div>
+               <div className='sm:px-13 flex flex-col gap-y-4 mt-3 gsap-animate'>
+                  <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1 relative inline-block'>
+                     <span className="relative z-10 px-3 py-1">Hire me
+                        <div className="absolute inset-0 border-2 border-transparent">
+                           <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-teal-600"></div>
+                           <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-teal-600"></div>
+                        </div>
+                     </span>
+
+                  </div>
                   <div className='text-md sm:text-lg font-inter-400'>
                      <div>Have an idea? I can bring it live within weeks. Looking for a person who has immense attraction towards coding? I’m here. I’m available for internships & freelancing gigs.</div>
                      <div className='font-bold'>I code first, talk later.</div>
