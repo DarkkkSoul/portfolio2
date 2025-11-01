@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 .text-istok-400 {
-    font-family: "Istok Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Istok Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .text-istok-700 {
-    font-family: "Istok Web", sans-serif;
-    font-weight: 800;
-    font-style: normal;
+  font-family: "Istok Web", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* INTER */
@@ -20,13 +21,14 @@
 .font-inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight:300;
+  font-weight: 300;
   font-style: normal;
 }
+
 .font-inter-400 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight:400;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -39,6 +41,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 .font-playfair-700 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -55,15 +58,27 @@
   font-weight: 500;
   font-style: normal;
 }
+
 .font-manrope-400 {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 .font-manrope-600 {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+}
+
+/* RUBIK */
+/* <weight>: Use a value from 300 to 900 */
+
+.font-rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }

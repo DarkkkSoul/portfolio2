@@ -12,30 +12,30 @@ import NewBento from './components/NewBento.jsx';
 
 function App() {
 
-   useGSAP(() => {
-      const ctx = gsap.context(() => {
-         gsap.set('.gsap-animate', {
-            yPercent: 50,
-            autoAlpha: 0,
-            willChange: 'transform, opacity',
-            force3D: true,
-         });
+   // useGSAP(() => {
+   //    const ctx = gsap.context(() => {
+   //       gsap.set('.gsap-animate', {
+   //          yPercent: 50,
+   //          autoAlpha: 0,
+   //          willChange: 'transform, opacity',
+   //          force3D: true,
+   //       });
 
-         requestAnimationFrame(() => {
-            gsap.to('.gsap-animate', {
-               yPercent: 0,
-               autoAlpha: 1,
-               duration: 0.9,
-               stagger: 0.06,
-               ease: 'power2.out',
-               force3D: true,
-               lazy: false,
-               clearProps: 'willChange',
-            });
-         });
-      });
-      return () => ctx.revert();
-   }, []);
+   //       requestAnimationFrame(() => {
+   //          gsap.to('.gsap-animate', {
+   //             yPercent: 0,
+   //             autoAlpha: 1,
+   //             duration: 0.9,
+   //             stagger: 0.06,
+   //             ease: 'power2.out',
+   //             force3D: true,
+   //             lazy: false,
+   //             clearProps: 'willChange',
+   //          });
+   //       });
+   //    });
+   //    return () => ctx.revert();
+   // }, []);
 
    const { isOpen } = useModal();
    return (
@@ -92,7 +92,7 @@ function App() {
                </div>
 
                {/* rengoku */}
-               <div className='font-manrope-400 sm:text-lg text-md tracking-normal sm:mt-2 mt-3 gsap-animate'>
+               <div className='font-manrope-400 sm:text-lg text-md tracking-normal sm:mt-6 mt-3 gsap-animate'>
                   <div className='inline'>
                      I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben <span className='inline-block align-middle'> <img src="/utils/sound.png" className='sm:w-5 w-6 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} /></span>.
                      <audio id='sound1' src="/utils/umai.mp3"></audio>
@@ -100,17 +100,7 @@ function App() {
                </div>
 
                {/* bento */}
-               <div className='w-full sm:mt-4 gsap-animate hidden sm:block relative'>
-                  <img src="/utils/construction.png" alt="" className='absolute top-9 -rotate-10 left-100 w-8 z-10' />
-                  <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-120 w-10 z-10' />
-                  <img src="/utils/roller.png" alt="" className='absolute top-32 right-80 w-10 z-10 -rotate-30' />
-
-                  <div className='blur-md'>
-                     <Bento />
-                  </div>
-               </div>
-
-               <div className='w-full gsap-animate hidden'>
+               <div className='w-full flex gsap-animate justify-center items-center gsap-animate mt-6'>
                   <NewBento />
                </div>
 
