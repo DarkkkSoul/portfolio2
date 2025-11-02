@@ -29,8 +29,35 @@ function NewBento() {
             setTime(new Date().toTimeString().split(' ')[0]);
         }, 1000);
 
-        () => clearInterval(interval);
+        return () => clearInterval(interval);
     }, []);
+
+    const [day, setDay] = useState('');
+    useEffect(() => {
+        const updateDate = () => {
+            const now = new Date();
+            const formatted = now.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+            });
+            setDay(formatted);
+        };
+        updateDate();
+        const interval = setInterval(updateDate, 86400000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const [year, setYear] = useState();
+    useEffect(() => {
+        const updateYear = () => {
+            const now = new Date();
+            const formatted = now.getFullYear();
+            setYear(formatted);
+        };
+        updateYear();
+        const interval = setInterval(updateYear, 86400000);
+        return () => clearInterval(interval);
+    }, [])
 
     // blog
     const { isOpen, setIsOpen } = useModal();
@@ -46,7 +73,7 @@ function NewBento() {
     }
 
     return (
-        <div className="parent *:border *:border-white/70 *:shadow-lg/35">
+        <div className="parent *:border *:border-white/70 *:shadow-lg/35 relative">
 
             <div className="div1 bg-lime-300/30 px-2 font-playfair flex flex-col py-3 gap-y-2">
                 <div className="font-bold text-center">Tools I use</div>
@@ -76,8 +103,12 @@ function NewBento() {
             </div>
 
             <div className="div3 flex items-center justify-center text-4xl font-rubik relative bg-lime-300/30">
-                <img src="/utils/earth.png" className='absolute w-5 top-1.5 left-1.5' />
+                <div className='absolute flex items-center gap-x-1.5 top-1.5 left-1.5'>
+                    <img src="/utils/earth.png" className=' w-5 ' />
+                    <div className='text-xs tracking-wide'>{day}</div>
+                </div>
                 {time}
+                <div className='text-xs absolute bottom-1.5 right-1.5'>{year}</div>
             </div>
 
             <div className="div4 flex flex-col justify-center bg-lime-300/30">
@@ -91,32 +122,33 @@ function NewBento() {
                 </div>
             </div>
 
-            <div className='div5 flex flex-col justify-center font-rubik bg-lime-300/30'>
+            <div className='div5 flex flex-col justify-center font-rubik bg-lime-300/30 '>
                 <p className='text-lg pl-6'>I write</p>
                 <p onClick={() => { setIsOpen(true) }} className='text-7xl underline underline-offset-4 cursor-pointer pl-11 relative'>Blogs
                     <img src="/utils/link.png" className='absolute top-2 right-7 w-4' />
                 </p>
-
                 {
                     isOpen &&
-                    <div className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-100 flex p-4 sm:pt-5 pb-7 px-7 bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
-                        <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
-                            <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left font-manrope-400 tracking-wide'>
-                                Blogs
+                    <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[9999] flex items-center justify-center max-w-4xl min-w-4xl'>
+                        <div className='relative w-full max-h-[90vh] overflow-y-auto bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl p-4 sm:pt-5 pb-7 px-7'>
+                            <div className='w-full flex flex-col gap-y-3'>
+                                <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left font-manrope-400 tracking-wide'>
+                                    Blogs
+                                </div>
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
+                                    {blogArray.map((blog, i) => (
+                                        <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
+                                    ))}
+                                </div>
                             </div>
-                            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
-                                {blogArray.map((blog, i) => (
-                                    <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
-                                ))}
-                            </div>
-                        </div>
 
-                        <button
-                            className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
-                            onClick={() => setIsOpen(false)}
-                        >
-                            <img src="/utils/close.png" className='w-8 sm:w-9' />
-                        </button>
+                            <button
+                                className='absolute top-2 right-2 sm:top-3 sm:right-3 z-50 cursor-pointer'
+                                onClick={() => setIsOpen(false)}
+                            >
+                                <img src="/utils/close.png" className='w-8 sm:w-9' />
+                            </button>
+                        </div>
                     </div>
                 }
             </div>
@@ -125,6 +157,7 @@ function NewBento() {
                 <img src="/utils/Cute.jpeg" className='w-full h-full object-cover' />
             </div>
         </div>
+
     )
 }
 

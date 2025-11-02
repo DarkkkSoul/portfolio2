@@ -78,7 +78,7 @@ function NewSmBento() {
 
 
     return (
-        <div className='sm-parent *:border *:border-white/70 *:shadow-lg/35'>
+        <div className='sm-parent *:border *:border-white/70 *:shadow-lg/35 relative'>
 
             <div className='d1 flex flex-col items-center justify-evenly bg-lime-300/30'>
                 <a href="https://www.linkedin.com/in/maheshkgdev/" target='_blank' className='w-8'><img src="/Icons/linkedin.png" /></a>
@@ -100,18 +100,18 @@ function NewSmBento() {
 
             <div className='d4 flex flex-col justify-center font-rubik bg-lime-300/30'>
                 <p className='text-sm pl-4'>I write</p>
-                <p onClick={() => { setIsOpen(true) }} className='text-5xl underline underline-offset-4 cursor-pointer pl-7 relative'>Blogs
-                    <img src="/utils/link.png" className='absolute top-1 right-1 w-3' />
+                <p onClick={() => { setIsOpen(true) }} className='text-5xl underline underline-offset-4 cursor-pointer pl-6 relative'>Blogs
+                    <img src="/utils/link.png" className='absolute top-1 right-2 w-3' />
                 </p>
 
                 {
                     isOpen &&
-                    <div className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-100 flex p-4 sm:pt-5 pb-7 px-7 bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl'>
-                        <div className='w-full sm:w-3xl flex flex-col gap-y-3'>
-                            <div className='text-xl sm:text-2xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center sm:text-left font-manrope-400 tracking-wide'>
+                    <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] flex p-4 sm:pt-5 pb-7 px-7 bg-gradient-to-br from-lime-200 to-green-300 rounded-xl shadow-2xl min-w-xs max-w-xs'>
+                        <div className='w-full flex flex-col gap-y-3'>
+                            <div className='text-xl text-lime-900 font-extrabold drop-shadow-md drop-shadow-amber-500 text-center font-manrope-400 tracking-wide'>
                                 Blogs
                             </div>
-                            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
+                            <div className='grid grid-cols-1 gap-2.5 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-track-slate-300'>
                                 {blogArray.map((blog, i) => (
                                     <Blog key={i} title={blog.title} description={blog.description} link={blog.link} />
                                 ))}
