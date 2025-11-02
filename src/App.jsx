@@ -6,44 +6,39 @@ import { useModal } from './Context/ModalContext.jsx';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
-import SmBento from './components/SmBento.jsx';
 import NewBento from './components/NewBento.jsx';
 import NewSmBento from './components/NewSmBento.jsx';
 
 function App() {
 
-   // useGSAP(() => {
-   //    const ctx = gsap.context(() => {
-   //       gsap.set('.gsap-animate', {
-   //          yPercent: 50,
-   //          autoAlpha: 0,
-   //          willChange: 'transform, opacity',
-   //          force3D: true,
-   //       });
+   useGSAP(() => {
+      const ctx = gsap.context(() => {
+         gsap.set('.gsap-animate', {
+            yPercent: 50,
+            autoAlpha: 0,
+            willChange: 'transform, opacity',
+            force3D: true,
+         });
 
-   //       requestAnimationFrame(() => {
-   //          gsap.to('.gsap-animate', {
-   //             yPercent: 0,
-   //             autoAlpha: 1,
-   //             duration: 0.9,
-   //             stagger: 0.06,
-   //             ease: 'power2.out',
-   //             force3D: true,
-   //             lazy: false,
-   //             clearProps: 'willChange',
-   //          });
-   //       });
-   //    });
-   //    return () => ctx.revert();
-   // }, []);
+         requestAnimationFrame(() => {
+            gsap.to('.gsap-animate', {
+               yPercent: 0,
+               autoAlpha: 1,
+               duration: 0.9,
+               stagger: 0.06,
+               ease: 'power2.out',
+               force3D: true,
+               lazy: false,
+               clearProps: 'willChange',
+            });
+         });
+      });
+      return () => ctx.revert();
+   }, []);
 
    const { isOpen } = useModal();
    return (
       <div>
-         {/* Under Development Tag */}
-         <div className="fixed top-6 sm:top-9 left-1/2 transform -translate-x-1/2 z-50 bg-amber-400/70 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm sm:text-md font-semibold shadow-lg border border-amber-400/50 font-playfair-700 tracking-widest ">
-            Under Development
-         </div>
 
          {isOpen && (
             <div className="fixed inset-0 backdrop-blur-3xl bg-black/60 overflow-hidden" />

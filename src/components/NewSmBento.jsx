@@ -24,7 +24,7 @@ function NewSmBento() {
             await navigator.clipboard.writeText(text);
             setIsCopied(true);
             alert('Email copied to clipboard.');
-        } catch (error) {
+        } catch {
             const textArea = document.createElement("textarea");
             textArea.value = text;
 
@@ -63,6 +63,33 @@ function NewSmBento() {
         () => clearInterval(interval);
     }, []);
 
+    const [day, setDay] = useState('');
+    useEffect(() => {
+        const updateDate = () => {
+            const now = new Date();
+            const formatted = now.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+            });
+            setDay(formatted);
+        };
+        updateDate();
+        const interval = setInterval(updateDate, 86400000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const [year, setYear] = useState();
+    useEffect(() => {
+        const updateYear = () => {
+            const now = new Date();
+            const formatted = now.getFullYear();
+            setYear(formatted);
+        };
+        updateYear();
+        const interval = setInterval(updateYear, 86400000);
+        return () => clearInterval(interval);
+    }, [])
+
     // blog
     const { isOpen, setIsOpen } = useModal();
 
@@ -94,8 +121,12 @@ function NewSmBento() {
             </div>
 
             <div className="d3 flex items-center justify-center text-3xl font-rubik relative bg-lime-300/30">
-                <img src="/utils/earth.png" className='absolute w-4 top-1 left-1' />
+                <div className='absolute flex items-center gap-x-0.5 top-1.5 left-1'>
+                    <img src="/utils/earth.png" className=' w-4 ' />
+                    <div className='text-xs tracking-wide'>{day}</div>
+                </div>
                 {time}
+                <div className='text-xs absolute bottom-1 right-1'>{year}</div>
             </div>
 
             <div className='d4 flex flex-col justify-center font-rubik bg-lime-300/30'>
