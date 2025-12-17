@@ -3,38 +3,10 @@ import './styles/index.css';
 import projects from './Arrays/projects.js';
 import Skills from './components/Skills.jsx';
 import { useModal } from './Context/ModalContext.jsx';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-gsap.registerPlugin(useGSAP);
 import NewBento from './components/NewBento.jsx';
 import NewSmBento from './components/NewSmBento.jsx';
 
 function App() {
-
-   useGSAP(() => {
-      const ctx = gsap.context(() => {
-         gsap.set('.gsap-animate', {
-            yPercent: 50,
-            autoAlpha: 0,
-            willChange: 'transform, opacity',
-            force3D: true,
-         });
-
-         requestAnimationFrame(() => {
-            gsap.to('.gsap-animate', {
-               yPercent: 0,
-               autoAlpha: 1,
-               duration: 0.9,
-               stagger: 0.06,
-               ease: 'power2.out',
-               force3D: true,
-               lazy: false,
-               clearProps: 'willChange',
-            });
-         });
-      });
-      return () => ctx.revert();
-   }, []);
 
    const { isOpen } = useModal();
    return (
@@ -49,14 +21,14 @@ function App() {
             <div className='bg-white/30 backdrop-blur-lg w-94 sm:w-1/2 py-6 sm:py-10 px-5 sm:px-0 rounded-md flex flex-col items-center justify-center gap-y-6 '>
 
                {/* about me & image */}
-               <div className=' flex sm:flex-row flex-col-reverse items-center justify-around sm:px-6 gap-y-4 font-inter gsap-animate'>
+               <div className=' flex sm:flex-row flex-col-reverse items-center justify-around sm:px-6 gap-y-4 font-inter '>
 
                   <div className='sm:w-2/3'>
                      <div className='flex flex-col sm:gap-y-1 gap-y-1.5'>
                         <div className='sm:text-3xl text-2xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 gsap-welcome font-manrope-600'>Welcomeoi,</div>
 
                         <p className='sm:text-lg text-md font-inter-400'>
-                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a full stack developer, based in India.  I love building interactive & scalable products, I love structuring <span className='underline underline-offset-4 decoration-amber-700/80 decoration-2'>complex backends</span>. <br />I started my web development journey around Septermber 2024 where I built countless projects which made my foundations strong enough that I can learn any new things within days. <br />I work solo and fast, mostly with <span className='underline underline-offset-4 decoration-yellow-400/80 decoration-[0.16rem]'>Javascript frameworks</span>.
+                           私は (I’m) Mahesh a.k.a <span className='text-lime-800 font-extrabold'>Dark Soul</span>, a full stack developer, based in India.  I love building interactive & scalable products, I love structuring <span className='underline underline-offset-4 decoration-amber-700/80 decoration-2'>complex backends</span>. <br />I started my web development journey around Septermber 2024 where I built countless projects which made my foundations strong enough that I can learn any new things within days. <br />I work solo and fast, mostly with <span className='underline underline-offset-4 decoration-yellow-400/80 decoration-[0.16rem]'>Javascript frameworks</span>.
                            You will see me posting about backend designing and exploring new technologies publically.
                            <br />Currently, I'm deep diving into React and planning to shift my career toward Gen AI where I can take my projects to next level by integrating AI.
                         </p>
@@ -70,7 +42,7 @@ function App() {
                </div>
 
                {/* projects */}
-               <div className='w-full flex flex-col gap-y-7 sm:mt-5 mt-3 gsap-animate'>
+               <div className='w-full flex flex-col gap-y-7 sm:mt-5 mt-3 '>
                   <div className='sm:px-13 px-1 sm:text-2xl text-xl text-lime-800 font-extrabold drop-shadow-md drop-shadow-amber-400 font-manrope relative inline-block'>
                      <span className="relative z-10 px-3 py-1">Projects I've Built
                         <div className="absolute inset-0 border-2 border-transparent">
@@ -89,12 +61,12 @@ function App() {
                </div>
 
                {/* skills */}
-               <div className='sm:px-13 sm:mt-1 gsap-animate'>
+               <div className='sm:px-13 sm:mt-1 '>
                   <Skills />
                </div>
 
                {/* rengoku */}
-               <div className='font-manrope-400 sm:text-lg text-md tracking-normal sm:mt-6 mt-3 gsap-animate'>
+               <div className='font-manrope-400 sm:text-lg text-md tracking-normal sm:mt-6 mt-3 '>
                   <div className='inline'>
                      I love designing bento styled websites, just like how <span className='[filter:drop-shadow(0_0_3px_#facc15)_drop-shadow(0_0_6px_#f43f5e)] font-bold'>Rengoku</span> loves to eat ekiben <span className='inline-block align-middle'> <img src="/utils/sound.png" className='sm:w-5 w-6 cursor-pointer' onClick={() => { document.getElementById('sound1').play() }} /></span>.
                      <audio id='sound1' src="/utils/umai.mp3"></audio>
@@ -102,15 +74,15 @@ function App() {
                </div>
 
                {/* bento */}
-               <div className='w-full sm:flex gsap-animate justify-center items-center gsap-animate mt-6 hidden'>
+               <div className='w-full sm:flex  justify-center items-center  mt-6 hidden'>
                   <NewBento />
                </div>
 
-               <div className='w-full flex gsap-animate justify-center items-center gsap-animate mt-6 sm:hidden'>
+               <div className='w-full flex  justify-center items-center  mt-6 sm:hidden'>
                   <NewSmBento />
                </div>
 
-               {/* <div className='gsap-animate sm:hidden block relative'>
+               {/* <div className=' sm:hidden block relative'>
                   <img src="/utils/construction.png" alt="" className='absolute top-10 left-5 -rotate-10 w-7 z-10 ' />
                   <img src="/utils/painting.png" alt="" className='absolute bottom-11 right-16 w-9 -rotate-5 z-10' />
                   <img src="/utils/roller.png" alt="" className='absolute top-30 right-11 w-8 -rotate-30 z-10' />
@@ -121,7 +93,7 @@ function App() {
                </div> */}
 
                {/* Hire me */}
-               <div className='sm:px-13 flex flex-col gap-y-4 mt-3 gsap-animate'>
+               <div className='sm:px-13 flex flex-col gap-y-4 mt-3 '>
                   <div className='sm:text-2xl text-xl text-lime-800 font-manrope drop-shadow-md drop-shadow-amber-400 mb-1 relative inline-block'>
                      <span className="relative z-10 px-3 py-1">Hire me
                         <div className="absolute inset-0 border-2 border-transparent">
@@ -138,7 +110,7 @@ function App() {
                </div>
 
                {/* footer */}
-               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs gsap-animate'>
+               <div className='w-full flex flex-col gap-y-3 items-center justify-around mt-3 font-inter-400 sm:text-sm text-xs '>
                   <hr className='w-2/3 border-1 border-lime-600 drop-shadow-lg ' />
                   <div className='flex sm:flex-row flex-col items-center gap-x-30 gap-y-1'>
                      <div>Peace Out!</div>

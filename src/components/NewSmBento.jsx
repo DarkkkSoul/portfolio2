@@ -1,5 +1,3 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -12,13 +10,6 @@ function NewSmBento() {
 
     // social
     const [isCopied, setIsCopied] = useState(false);
-    useGSAP(() => {
-        gsap.from('.gsap-copy', {
-            yPercent: 30,
-            opacity: 0,
-            duration: 0.5,
-        })
-    }, [isCopied]);
     const handleCopy = async (text) => {
         try {
             await navigator.clipboard.writeText(text);
